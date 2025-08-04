@@ -11,9 +11,14 @@ app.use(express.json());
 
 //Import Routes
 import userRoute from "./route/route.js"
+import productRoute from "./route/Productroute.js"
+
+//Static file
+app.use("/uploads",express.static("uploads"));
+
 //Using Routes
 app.use("/api/",userRoute);
-
+app.use("/api/",productRoute);
 
 app.get("/",(req,res) => {
     res.send("<h1> Hello World </h1>");

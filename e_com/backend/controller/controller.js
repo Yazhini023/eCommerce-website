@@ -1,4 +1,4 @@
-import { User } from "../model/user.js";
+import { User } from "../model/User.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import sendMail from "../middleware/sendmail.js";
