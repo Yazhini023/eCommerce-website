@@ -1,5 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
+import cors from "cors";
 import connectDB from "./db/db.js";
 
 const app = express();
@@ -8,6 +9,7 @@ const port=process.env.PORT;
 
 //Middle wares
 app.use(express.json());
+app.use(cors());
 
 //Import Routes
 import userRoute from "./route/route.js"
