@@ -1,8 +1,9 @@
-// In App.jsx
+// App.jsx
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './Components/Navbar';
 import SignUp from './Components/Signup';
-import OtpVerify from './Components/OtpVerify'; // ✅ Import OTP Page
+import Login from './Components/Login';
+import Home from './Components/Home';
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/signup' element={<SignUp />} />
-        <Route path='/verify' element={<OtpVerify />} /> {/* ✅ New OTP Route */}
+        <Route path='/login' element={<Login />} />
+        <Route path='/' element={<Home />} />
       </Routes>
     </Router>
   );
