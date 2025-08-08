@@ -17,8 +17,12 @@ function Login() {
     e.preventDefault();
     try {
       const response = await axios.post('http://localhost:1000/api/user/login', formData);
-
       const user = response.data.user;
+
+      // ✅ Store role in sessionStorage
+      sessionStorage.setItem('role', user.role);
+
+      // ✅ Redirect based on role
       if (user.role === 'admin') {
         navigate('/admin');
       } else {
