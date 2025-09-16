@@ -27,6 +27,7 @@ const Navbar = () => {
       {userRole === 'user' && isUserPage && (
         <>
           <Link to="/home" style={{ marginRight: '1rem' }}>Home</Link>
+          <Link to="/product" style={{ marginRight: '1rem' }}>Products</Link>
           <button onClick={handleLogout}>Logout</button>
         </>
       )}
@@ -37,6 +38,7 @@ const Navbar = () => {
           <Link to="/login">Login</Link>
         </>
       )}
+      
     </nav>
   );
 };
